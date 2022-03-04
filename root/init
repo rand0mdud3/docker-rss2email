@@ -1,0 +1,11 @@
+#!/usr/bin/dumb-init /bin/sh
+TIMEZONE=${TZ:-UTC}
+
+echo "Setup timezone ($TIMEZONE)"
+cp "/usr/share/zoneinfo/$TIMEZONE" /etc/localtime
+echo "$TIMEZONE" > /etc/timezone
+
+while true; do
+    r2e -c /config/rss2email.cfg -d /config/rss2email.json -V run
+    sleep 1h
+done
