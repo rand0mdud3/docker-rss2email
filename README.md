@@ -1,1 +1,1 @@
-https://github.com/rand0mdud3/rss2email
+https://github.com/rand0mdud3/docker-rss2email
