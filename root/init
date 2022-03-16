@@ -7,5 +7,5 @@ echo "$TIMEZONE" > /etc/timezone
 
 while true; do
     r2e -c /config/rss2email.cfg -d /config/rss2email.json run
-    sleep 1h
+    sleep ${UPDATE_EVERY:-1h}
 done
